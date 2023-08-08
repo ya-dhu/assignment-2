@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Pizza - Checkout</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <div class="logo-container">
+        <img src="logo.png" alt="Delicious Pizza Logo" class="logo">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="checkout">
+        <h2>Checkout</h2>
+        <form id="checkout-form">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+
+                <label for="allergy">Do you have any allergies?</label>
+                <input type="checkbox" id="allergy" name="allergy">
+                <div id="allergy-section" style="display: none;">
+                    <label>Common Allergens:</label>
+                    <ul>
+                        <li><input type="checkbox" name="allergens[]" value="Dairy"> Dairy</li>
+                        <li><input type="checkbox" name="allergens[]" value="Gluten"> Gluten</li>
+                        <li><input type="checkbox" name="allergens[]" value="Nuts"> Nuts</li>
+                        <li><input type="checkbox" name="allergens[]" value="Soy"> Soy</li>
+                        <li><input type="checkbox" name="allergens[]" value="Shellfish"> Shellfish</li>
+                        <!-- Add more common allergens here -->
+                    </ul>
+                    <label for="custom-allergen">Other Allergens:</label>
+                    <textarea id="custom-allergen" name="custom-allergen" rows="2" placeholder="Enter any other allergens"></textarea>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Pizza Toppings</legend>
+                <label for="toppings">Select Toppings:</label>
+                <select id="toppings" name="toppings[]" multiple required>
+                    <option value="Pepperoni">Pepperoni</option>
+                    <option value="Mushrooms">Mushrooms</option>
+                    <option value="Onions">Onions</option>
+                    <option value="Bell Peppers">Bell Peppers</option>
+                    <option value="Olives">Olives</option>
+                    <!-- Add more toppings here -->
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Drink Options</legend>
+                <label for="drinks">Select Drinks:</label>
+                <select id="drinks" name="drinks[]" multiple required>
+                    <option value="Coke">Coke</option>
+                    <option value="Sprite">Sprite</option>
+                    <option value="Fanta">Fanta</option>
+                    <option value="Root Beer">Root Beer</option>
+                    <option value="Lemonade">Lemonade</option>
+                    <!-- Add more drink options here -->
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Payment Information</legend>
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" name="card-number" required>
+
+                <label for="card-holder">Card Holder Name:</label>
+                <input type="text" id="card-holder" name="card-holder" required>
+
+                <label for="expiry-date">Card Expiry Date:</label>
+                <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required>
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required>
+            </fieldset>
+
+            <button type="submit">Place Order</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2023 Delicious Pizza. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
